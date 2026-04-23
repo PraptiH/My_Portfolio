@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+NO:wght@100..400&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: #dce1de;
+             font-family: "Lobster Two", sans-serif;
+        }
+
+        .navBox{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 49rem;
+            row-gap: 4.9rem;
+            width: 51rem;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+     <div class="border-b-4 p-[3rem]">
+        <div class="navBox">
+            <div class="w-[1rem] h-[1rem] bg-white border-4"></div>
+            <div class="w-[1rem] h-[1rem] bg-white border-4"></div>
+            <div class="w-[1rem] h-[1rem] bg-white border-4"></div>
+            <div class="w-[1rem] h-[1rem] bg-white border-4"></div>
+        </div>
+        <div class="border-4 w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute top-16 left-[47rem]">
+             <div class="py-[1.5rem] flex items-center gap-2">
+                <img class="w-[4rem]" src="./assets/star.png" alt="logo" width="26">
+                <h4 class="font-bold text-3xl">Prapti</h4>
+             </div>  
+             <div class="flex items-center justify-between gap-[2rem] font-medium text-2xl border-l-3">
+                <p class="py-[1.5rem] ml-[1rem] px-[1rem]">About</p>
+                <p class="py-[1.5rem] px-[1rem] border-l-3 border-r-3">Project</p>
+                <p class="py-[1.5rem] ">Contact</p>
+             </div>
+        </div>
+     </div>
+</body>
+
+</html> 

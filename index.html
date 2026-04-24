@@ -14,22 +14,24 @@
     <style>
         body {
             background-color: #dce1de;
-             font-family: "Lobster Two", sans-serif;
+            font-family: "Lobster Two", sans-serif;
+            overflow-x: hidden;
         }
 
-        .navBox{
+        .navBox {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             column-gap: 49rem;
             row-gap: 4.9rem;
-            width: 51rem;
+            width: 50rem;
             margin: auto;
         }
 
-        .navLink{
+        .navLink {
             cursor: pointer;
         }
-        .navLink:hover{
+
+        .navLink:hover {
             text-decoration: underline;
             text-decoration-color: burlywood;
             text-decoration-thickness: 5px;
@@ -39,7 +41,7 @@
 
 <body>
     <!-- navbar -->
-     <div class="border-b-4 p-[3rem] relative">
+    <div class="border-b-4 p-[3rem]">
         <div class="navBox">
             <div class="w-[1rem] h-[1rem] bg-white border-3"></div>
             <div class="w-[1rem] h-[1rem] bg-white border-3"></div>
@@ -47,23 +49,55 @@
             <div class="w-[1rem] h-[1rem] bg-white border-3"></div>
         </div>
 
-        <div class="border-4 w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute top-16 left-[47rem]">
-             <div class="py-[1.5rem] flex items-center gap-2">
-                <img class="w-[4rem] cursor-pointer" src="./assets/star.png" alt="logo" width="26">
+        <div
+            class="border-4 w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute top-16 left-[47rem]">
+            <div class="py-[1.5rem] flex items-center gap-2">
+                <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
                 <h4 class="font-bold text-3xl cursor-pointer">Prapti</h4>
-             </div>  
-             <div class="flex items-center justify-between gap-[2rem] font-medium text-2xl border-l-3">
+            </div>
+            <div class="flex items-center justify-between gap-[2rem] font-medium text-2xl border-l-3">
                 <p class="navLink py-[1.5rem] ml-[1rem] px-[1rem]">About</p>
                 <p class="navLink py-[1.5rem] px-[1rem] border-l-3 border-r-3">Project</p>
                 <p class="navLink py-[1.5rem] ">Contact</p>
-             </div>
+            </div>
         </div>
 
         <div>
             <img class="w-[8rem] absolute top-25 -left-12 rotate-30" src="./assets/8-pointed-star.png" alt="">
             <img class="w-[8rem] absolute -top-5 -right-10 rotate-30" src="./assets/8-pointed-star.png" alt="">
         </div>
-     </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="flex items-center justify-center gap-[5rem] my-[8rem] h-[60rem]">
+
+        <div class="w-[50rem]">
+            <img src="./assets/heroImg.svg" alt="">
+            <h2 class="font-bold text-5xl leading-relaxed">Building clean, responsive web interfaces with modern
+                technologies.</h2>
+            <p class="text-3xl tracking-wider leading-loose">Aspiring Software Engineer focused on creating intuitive, user-friendly
+                digital experiences.</p>
+        </div>
+
+        <div class="w-[50rem]">
+            <div class="w-[5rem] flex items-center -rotate-30 translate-x-8 translate-y-5">
+                <img src="./assets/smilei.png" alt="">
+                <p class="text-5xl">Prapti</p>
+                <img class="translate-y-15 -rotate-15" src="./assets/arrow.png" alt="">
+            </div>
+
+            <div class="mx-[4rem] relative">
+                <div class="border-t-4 border-b-4 w-[38rem] h-[40rem]">
+                    <img class="absolute -left-18 top-15 w-[15rem] -rotate-40" src="./assets/bulb.png" alt="">
+                    <div class="border-l-4 border-r-4 w-[35rem] h-[42rem] m-auto -translate-y-5">
+                        <img class="w-[30rem] border-3 m-auto translate-y-12" src="./assets/profile.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <img class="absolute translate-x-[36rem] -translate-y-[8.5rem] rotate-180 w-[10rem]" src="./assets/star.png" alt="">
+        </div>
+    </div>
 </body>
 
-</html> 
+</html>

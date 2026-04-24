@@ -36,6 +36,34 @@
             text-decoration-color: burlywood;
             text-decoration-thickness: 5px;
         }
+
+        .runningContainer {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .runningText {
+            width: max-content;
+            display: flex;
+            overflow: clip;
+            padding-left: 15px;
+            gap: 8rem;
+            color: white;
+            animation: scroll 10s linear infinite forwards;
+        }
+
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(10%);
+            }
+
+
+            100% {
+                transform: translateX(-50%);
+            }
+
+        }
     </style>
 </head>
 
@@ -75,7 +103,8 @@
             <img src="./assets/heroImg.svg" alt="">
             <h2 class="font-bold text-5xl leading-relaxed">Building clean, responsive web interfaces with modern
                 technologies.</h2>
-            <p class="text-3xl tracking-wider leading-loose">Aspiring Software Engineer focused on creating intuitive, user-friendly
+            <p class="text-3xl tracking-wider leading-loose">Aspiring Software Engineer focused on creating intuitive,
+                user-friendly
                 digital experiences.</p>
         </div>
 
@@ -95,7 +124,28 @@
                 </div>
             </div>
 
-            <img class="absolute translate-x-[36rem] -translate-y-[8.5rem] rotate-180 w-[10rem]" src="./assets/star.png" alt="">
+            <img class="absolute translate-x-[36rem] -translate-y-[8.5rem] rotate-180 w-[10rem]" src="./assets/star.png"
+                alt="">
+        </div>
+    </div>
+
+    <!-- Skill -->
+    <div class="runningContainer bg-black py-[2rem]">
+        <div class="runningText">
+            <p class="font-semibold text-5xl tracking-wider">HTML</p>
+            <p class="font-semibold text-5xl tracking-wider">CSS</p>
+            <p class="font-semibold text-5xl tracking-wider">Tailwind CSS</p>
+            <p class="font-semibold text-5xl tracking-wider">JavaScript</p>
+            <p class="font-semibold text-5xl tracking-wider">React</p>
+            <p class="font-semibold text-5xl tracking-wider">MongoDB</p>
+            <p class="font-semibold text-5xl tracking-wider">Firebase</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">HTML</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">CSS</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">Tailwind CSS</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">JavaScript</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">React</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">MongoDB</p>
+            <p aria-hidden="true" class="font-semibold text-5xl tracking-wider">Firebase</p>
         </div>
     </div>
 </body>

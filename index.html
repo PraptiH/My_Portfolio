@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+NO:wght@100..400&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28bbd88697.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
     <style>
         body {
@@ -88,11 +89,11 @@
             border-bottom: 4px solid;
             grid-column: 1;
             grid-row: 3;
-            
+
         }
 
         #card4 {
-            border:4px solid;
+            border: 4px solid;
             grid-column: 2;
             grid-row: 1/3;
         }
@@ -118,6 +119,13 @@
             grid-row: 3;
         }
 
+        .projectDiv {
+            border-top: 4px solid;
+            border-bottom: 4px solid;
+            padding: 8%;
+            width: 42rem;
+            margin-left: -2.5rem;
+        }
     </style>
 </head>
 
@@ -208,9 +216,10 @@
         </div>
     </div>
 
+    <!--  -->
     <div class="mx-[20rem] my-[5rem]">
         <div class="flex items-center gap-[2rem]">
-            <h1 class="font-semibold text-6xl ">What I bring to the table</h1>
+            <h1 class="font-semibold text-6xl text-[#081c15]">What I bring to the table</h1>
             <img class="w-[5rem] h-[5rem] object-cover" src="./assets/smile.png" alt="">
         </div>
 
@@ -238,14 +247,85 @@
                     Building apps using React, Tailwind, and JavaScript.</p>
             </div>
             <div id="card6" class="p-[2rem]">
-                <img class="w-[4rem] h-[4rem] bg-[#006466] border rounded-full p-2  object-cover" src="./assets/uiux.png" alt="">
+                <img class="w-[4rem] h-[4rem] bg-[#006466] border rounded-full p-2  object-cover"
+                    src="./assets/uiux.png" alt="">
                 <p>Clean UI & UX
                     Focused on intuitive and user-friendly design.</p>
             </div>
             <div id="card7" class="p-[2rem]">
-                 <img class="w-[4rem] h-[4rem] bg-[#8d9aa7] border rounded-full p-2  object-cover" src="./assets/error.png" alt="">
+                <img class="w-[4rem] h-[4rem] bg-[#8d9aa7] border rounded-full p-2  object-cover"
+                    src="./assets/error.png" alt="">
                 <p>Firebase Integration
                     Authentication, database, and real-time features.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Project -->
+    <div id="project" class="mx-[24rem] my-[8rem]">
+        <h2 class="text-[#081c15] font-bold text-7xl leading-loose">Projects</h2>
+
+        <div class="mt-10 flex justify-center">
+
+            <div class="">
+                <img class="w-[6rem] object-cover -rotate-25 mb-[2.5rem] -mx-[1rem]" src="./assets/icon.png" alt="">
+                <div
+                    class="border-l-4 border-r-4  p-5 w-[40rem]  mx-[4rem] -mt-[5rem] hover:shadow-slate-600 hover:shadow-[4px_0]">
+
+                    <div class="projectDiv hover:shadow-slate-600 hover:shadow-[0_4px]">
+                        <img class="w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/appStore.png" alt="">
+                        <div>
+                            <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals to
+                                explore, browse, and manage various applications.</p>
+                            <div class="flex items-center justify-between text-4xl text-[#1b4332] font-bold italic">
+                                <h4 class="">AppStore</h4>
+                                <i class="btn fa-solid fa-arrow-trend-up cursor-pointer" style="color: #1b4332;"></i>
+                            </div>
+
+                            <!-- <div
+                                class="hiddenSection leading-loose tracking-wider text-2xl mt-[2rem] bg-[#eff1ed] p-[2rem] ">
+                                <p> * Developed the frontend using React.js with TailwindCSS and daisyUI. <br>
+                                    * Used static JS files as placeholder for data representation. <br>
+                                    * Added review section where user can give review if installed the app. <br>
+                                    * Use localStorage for store the review. <br>
+                                    * Integrated Firebase for secure user authentication and authorization.
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img class="w-[6rem] object-cover -rotate-25 mb-[2.5rem] -mx-[1rem]" src="./assets/icon.png" alt="">
+                <div
+                    class="border-l-4 border-r-4  p-5 w-[40rem] mx-[4rem] -mt-[5rem] hover:shadow-slate-600 hover:shadow-[4px_0]">
+
+                    <div class="projectDiv hover:shadow-slate-600 hover:shadow-[0_4px]">
+                        <img class="w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/roommatefinder.png"
+                            alt="">
+                        <div>
+                            <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals find
+                                compatible
+                                roommates.</p>
+                            <div class="flex items-center justify-between text-4xl text-[#1b4332] font-bold italic">
+                                <h4 class="">RoommateFinder</h4>
+                                <i class="btn fa-solid fa-arrow-trend-up cursor-pointer" style="color: #1b4332;"></i>
+                            </div>
+
+                            <!-- <div
+                                class="hiddenSection leading-loose tracking-wider text-2xl mt-[2rem] bg-[#eff1ed] p-[2rem] rounded-2xl">
+                                <p> * Developed the frontend using React.js with TailwindCSS and daisyUI. <br>
+                                    * Utilized MongoDB for efficient data storage.
+                                    * Implemented RESTful APIs for data retrieval and representation.
+                                    * Integrated Firebase for secure user authentication and authorization.
+                                    * Added a search functionality to enable users to filter results effectively
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

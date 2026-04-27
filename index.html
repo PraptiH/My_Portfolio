@@ -154,12 +154,14 @@
             class="border-4 w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute bottom-15 left-[47rem]">
             <div class="py-[1.5rem] flex items-center gap-2">
                 <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
-                <h4 class="font-bold text-3xl cursor-pointer">Prapti</h4>
+                <h4 onclick="window.location.href='/index.html'" class="font-bold text-3xl cursor-pointer">Prapti</h4>
             </div>
-            <div class="flex items-center justify-between gap-[2rem] font-medium text-2xl border-l-3">
-                <p class="navLink py-[1.5rem] ml-[1rem] px-[1rem]">About</p>
-                <p class="navLink py-[1.5rem] px-[1rem] border-l-3 border-r-3">Project</p>
-                <p class="navLink py-[1.5rem] ">Contact</p>
+            <div class="border-l-3">
+                <ul class="flex items-center justify-between gap-[2rem] font-medium text-2xl ">
+                    <li class="navLink py-[1.5rem] ml-[1rem] px-[1rem]"><a href="#about">About</a></li>
+                    <li class="navLink py-[1.5rem] px-[1rem] border-l-3 border-r-3"><a href="#project">Project</a></li>
+                    <li class="navLink py-[1.5rem]"><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
 
@@ -169,8 +171,9 @@
         </div>
     </div>
 
-    <!-- Hero -->
-    <div class="flex items-center justify-center gap-[5rem] my-[8rem] h-[60rem]">
+    <div id="content">
+        <!-- Hero -->
+    <div id="about" class="flex items-center justify-center gap-[5rem] my-[8rem] h-[60rem]">
 
         <div class="w-[50rem]">
             <img src="./assets/heroImg.svg" alt="">
@@ -203,7 +206,7 @@
     </div>
 
     <!-- Skill -->
-    <div class="runningContainer bg-black py-[2rem]">
+    <div class="runningContainer bg-[#081c15] py-[2rem]">
         <div class="wrapperContainer">
             <div class="runningText">
                 <p class="font-semibold text-5xl tracking-wider">HTML</p>
@@ -228,7 +231,7 @@
     </div>
 
     <!--  -->
-    <div class="mx-[20rem] my-[5rem]">
+    <div class="mx-[20rem] my-[15rem]">
         <div class="flex items-center gap-[2rem]">
             <h1 class="font-semibold text-6xl text-[#081c15]">What I bring to the table</h1>
             <img class="w-[5rem] h-[5rem] object-cover" src="./assets/smile.png" alt="">
@@ -278,11 +281,9 @@
         <h2 class="text-[#081c15] font-bold text-7xl leading-loose">Projects</h2>
 
         <div class="mt-10 flex justify-center">
-
-            <div class="">
-                <img class="w-[6rem] object-cover -rotate-25 mb-[2.5rem] -mx-[1rem]" src="./assets/icon.png" alt="">
+                 
                 <div
-                    class="border-l-4 border-r-4  p-5 w-[40rem]  mx-[4rem] -mt-[5rem] hover:shadow-slate-600 hover:shadow-[4px_0]">
+                    class="border-l-4 border-r-4 p-4 w-[40rem]  mx-[4rem] hover:shadow-slate-600 hover:shadow-[4px_0]">
 
                     <div class="projectDiv hover:shadow-slate-600 hover:shadow-[0_4px]">
                         <img class="w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/appStore.png" alt="">
@@ -291,27 +292,16 @@
                                 explore, browse, and manage various applications.</p>
                             <div class="flex items-center justify-between text-4xl text-[#1b4332] font-bold italic">
                                 <h4 class="">AppStore</h4>
-                                <i class="btn fa-solid fa-arrow-trend-up cursor-pointer" style="color: #1b4332;"></i>
+                                <i onclick="loadPage('/appstore.html')" class="btn fa-solid fa-arrow-trend-up cursor-pointer" style="color: #1b4332;"></i>
                             </div>
 
-                            <!-- <div
-                                class="hiddenSection leading-loose tracking-wider text-2xl mt-[2rem] bg-[#eff1ed] p-[2rem] ">
-                                <p> * Developed the frontend using React.js with TailwindCSS and daisyUI. <br>
-                                    * Used static JS files as placeholder for data representation. <br>
-                                    * Added review section where user can give review if installed the app. <br>
-                                    * Use localStorage for store the review. <br>
-                                    * Integrated Firebase for secure user authentication and authorization.
-                                </p>
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div>
-                <img class="w-[6rem] object-cover -rotate-25 mb-[2.5rem] -mx-[1rem]" src="./assets/icon.png" alt="">
+                
                 <div
-                    class="border-l-4 border-r-4  p-5 w-[40rem] mx-[4rem] -mt-[5rem] hover:shadow-slate-600 hover:shadow-[4px_0]">
+                    class="border-l-4 border-r-4 p-4 w-[40rem] mx-[4rem] hover:shadow-slate-600 hover:shadow-[4px_0]">
 
                     <div class="projectDiv hover:shadow-slate-600 hover:shadow-[0_4px]">
                         <img class="w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/roommatefinder.png"
@@ -322,28 +312,17 @@
                                 roommates.</p>
                             <div class="flex items-center justify-between text-4xl text-[#1b4332] font-bold italic">
                                 <h4 class="">RoommateFinder</h4>
-                                <i class="btn fa-solid fa-arrow-trend-up cursor-pointer" style="color: #1b4332;"></i>
+                                <i onclick="loadPage('/roommateFinder.html')" class="btn fa-solid fa-arrow-trend-up cursor-pointer" style="color: #1b4332;"></i>
                             </div>
-
-                            <!-- <div
-                                class="hiddenSection leading-loose tracking-wider text-2xl mt-[2rem] bg-[#eff1ed] p-[2rem] rounded-2xl">
-                                <p> * Developed the frontend using React.js with TailwindCSS and daisyUI. <br>
-                                    * Utilized MongoDB for efficient data storage.
-                                    * Implemented RESTful APIs for data retrieval and representation.
-                                    * Integrated Firebase for secure user authentication and authorization.
-                                    * Added a search functionality to enable users to filter results effectively
-                                </p>
-                            </div> -->
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
-
+    </div>
     </div>
 
     <!-- Footer -->
-    <div class="flex items-center justify-center gap-[5rem] border-t-4 p-[4rem] mt-[5rem] bottom-0  w-full ">
+    <div id="contact" class="flex items-center justify-center gap-[5rem] border-t-4 p-[4rem] mt-[5rem] bottom-0  w-full ">
 
         <div class="flex items-center gap-[1rem]">
             <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
@@ -358,6 +337,7 @@
             <i class="fa-brands fa-facebook cursor-pointer" style="color: #081c15;"></i>
         </div>
     </div>
+
     <script src="./index.js"></script>
 </body>
 

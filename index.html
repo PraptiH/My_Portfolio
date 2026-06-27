@@ -36,7 +36,7 @@
             grid-template-columns: repeat(2, 1fr);
             column-gap: 49.5rem;
             row-gap: 4.8rem;
-            width: 52rem;
+            width: min(52rem, 90%);
             margin: auto;
         }
 
@@ -45,8 +45,6 @@
             height: 16px;
             border: 3px solid;
         }
-
-        .navContent {}
 
         .navLink {
             cursor: pointer;
@@ -144,14 +142,14 @@
             border-bottom: 4px solid;
             padding: 8%;
             width: 42rem;
-            margin-left: -2.5rem;
+            margin-left: -2.5rem
         }
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <div id="navbar" class="border-b-4 p-[6rem] fixed top-0 z-1 w-full">
+    <div id="navbar" class="border-b-4 sticky p-24 top-0 z-50 w-full">
         <div class="navBox">
             <div></div>
             <div></div>
@@ -160,7 +158,7 @@
         </div>
 
         <div
-            class="navContent border-4 w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute bottom-15 -left-1/2 -right-1/2">
+            class="navContent border-4 w-full max-w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute bottom-15 -left-1/2 -right-1/2">
             <div class="py-[1.5rem] flex items-center gap-2">
                 <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
                 <h4 onclick="window.location.href='/index.html'" class="font-bold text-3xl cursor-pointer">Prapti</h4>
@@ -180,11 +178,11 @@
         </div>
     </div>
 
-    <div id="content">
+    <div id="content" class="w-full mx-auto">
         <!-- Hero -->
-        <div id="about" class="flex items-center justify-center gap-[5rem] my-[8rem] h-[60rem]">
+        <div id="about" class="flex flex-col lg:flex-row items-center justify-center gap-20 min-h-screen w-full">
 
-            <div class="w-[50rem]">
+            <div class="w-full max-w-[50rem]">
                 <img src="./assets/heroImg.svg" alt="">
                 <h2 class="font-bold text-5xl leading-relaxed">Building clean, responsive web interfaces with modern
                     technologies.</h2>
@@ -194,7 +192,7 @@
                     digital experiences.</p>
             </div>
 
-            <div class="w-[50rem]">
+            <div class="w-full lg:w-[50rem]">
                 <div class="w-[5rem] flex items-center -rotate-30 translate-x-8 translate-y-5">
                     <img src="./assets/smilei.png" alt="">
                     <p class="text-5xl">Prapti</p>
@@ -210,13 +208,15 @@
                     </div>
                 </div>
 
-                <img class="absolute translate-x-[36rem] -translate-y-[8.5rem] rotate-180 w-[10rem]"
+                <div class="relative">
+                    <img class="absolute -right-5 -top-30 lg:right-10 rotate-180 w-[10rem]"
                     src="./assets/star.png" alt="">
+                </div>
             </div>
         </div>
 
         <!-- Skill -->
-        <div class="runningContainer bg-black py-[2rem]">
+        <div class="runningContainer bg-black py-[2rem] lg:my-0 my-25">
             <div class="wrapperContainer">
                 <div class="runningText">
                     <p class="font-semibold text-5xl tracking-wider">HTML</p>
@@ -241,7 +241,7 @@
         </div>
 
         <!--  -->
-        <div class="mx-[20rem] my-[15rem]">
+        <div class="max-w-7xl mx-auto px-6 my-[15rem]">
             <div class="flex items-center gap-[2rem]">
                 <h1 class="font-semibold text-6xl">What I bring to the table</h1>
                 <img class="w-[5rem] h-[5rem] object-cover" src="./assets/smile.png" alt="">
@@ -287,15 +287,15 @@
         </div>
 
         <!-- Project -->
-        <div id="project" class="mx-[24rem] my-[15rem]">
+        <div id="project" class="max-w-7xl mx-auto px-6 my-[15rem]">
             <h2 class="font-bold text-7xl leading-loose">Projects</h2>
 
-            <div class="mt-10 flex justify-center">
+            <div class="mt-10 flex flex-col lg:flex-row justify-center mx-15">
 
-                <div class="border-l-4 border-r-4 p-4 w-[40rem]  mx-[4rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
+                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem]  mx-[4rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
 
                     <div class="projectDiv hover:shadow-gray-500 hover:shadow-[0_4px]">
-                        <img class="w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/appStore.png" alt="">
+                        <img class="w-full max-w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/appStore.png" alt="">
                         <div>
                             <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals to
                                 explore, browse, and manage various applications.</p>
@@ -310,10 +310,10 @@
                     </div>
                 </div>
 
-                <div class="border-l-4 border-r-4 p-4 w-[40rem] mx-[4rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
+                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem] mx-[4rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
 
                     <div class="projectDiv hover:shadow-gray-500 hover:shadow-[0_4px]">
-                        <img class="w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/roommatefinder.png"
+                        <img class="w-full max-w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/roommatefinder.png"
                             alt="">
                         <div>
                             <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals find
@@ -349,7 +349,7 @@
         </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

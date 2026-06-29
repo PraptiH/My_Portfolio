@@ -23,64 +23,6 @@
             overflow-x: hidden;
         }
 
-        .navColor {
-            background-color: #fefff0;
-        }
-
-         .navContent {
-            position: relative;
-            width: min(50rem, 90vw);
-        }
-
-        .navBox {
-            position: absolute;
-            inset: 0;
-            transform: translateX(-3.2rem);
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-        }
-
-        .navBox div:nth-child(1) {
-            justify-self: start;
-            align-self: start;
-            transform: translate(32px, -18px);
-        }
-
-        .navBox div:nth-child(2) {
-            justify-self: end;
-            align-self: start;
-            transform: translate(70px, -18px);
-        }
-
-        .navBox div:nth-child(3) {
-            justify-self: start;
-            align-self: end;
-            transform: translate(32px, 18px);
-        }
-
-        .navBox div:nth-child(4) {
-            justify-self: end;
-            align-self: end;
-            transform: translate(70px, 18px);
-        }
-
-        .navBox div {
-            width: 16px;
-            height: 16px;
-            border: 3px solid;
-        }
-
-        .navLink {
-            cursor: pointer;
-        }
-
-        .navLink:hover {
-            text-decoration: underline;
-            text-decoration-color: burlywood;
-            text-decoration-thickness: 5px;
-        }
-
         .runningContainer {
             overflow: hidden;
         }
@@ -179,7 +121,7 @@
                 flex-direction: column;
             }
 
-            .heroTextContainer{
+            .heroTextContainer {
                 padding: 25px;
             }
 
@@ -247,39 +189,9 @@
 </head>
 
 <body>
-    <!-- navbar -->
-    <div id="navbar" class="border-b-4 sticky pt-20 pb-5 top-0 z-50 w-full">
+    <div id="navbar-slot"></div>
 
-
-        <div class="navContent border-4 h-[5rem] mx-auto flex items-center p-[2rem] justify-between bottom-10 ">
-
-            <div class="navBox">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <div class="py-[1.5rem] flex items-center gap-2">
-                <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
-                <h4 onclick="window.location.href='/index.html'" class="font-bold text-3xl cursor-pointer">Prapti</h4>
-            </div>
-            <div class="border-l-3">
-                <ul class="flex items-center justify-between gap-[2rem] font-medium text-2xl ">
-                    <li class="navLink py-[1.5rem] ml-[1rem] px-[1rem]"><a href="#about">About</a></li>
-                    <li class="navLink py-[1.5rem] px-[1rem] border-l-3 border-r-3"><a href="#project">Project</a></li>
-                    <li class="navLink py-[1.5rem]"><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- <div class="border-2 border-red-700">
-            <img class="w-[8rem] absolute top-20 -translate-x-10 rotate-30" src="./assets/8-pointed-star.png" alt="">
-            <img class="w-[8rem] absolute bottom-25 right-10 rotate-30" src="./assets/8-pointed-star.png" alt="">
-        </div> -->
-    </div>
-
-    <div id="content" class="w-full mx-auto">
+    <div id="content" class="w-full mx-auto mt-50">
         <!-- Hero -->
         <div id="about" class="flex items-center justify-center gap-20 min-h-screen max-w-screen-2xl mx-auto">
 
@@ -310,8 +222,7 @@
                 </div>
 
                 <div class="relative">
-                    <img class="absolute -right-5 -top-30 rotate-180 w-[10rem]" src="./assets/star.png"
-                        alt="">
+                    <img class="absolute -right-5 -top-30 rotate-180 w-[10rem]" src="./assets/star.png" alt="">
                 </div>
             </div>
         </div>
@@ -404,7 +315,7 @@
                                 explore, browse, and manage various applications.</p>
                             <div class="flex items-center justify-between text-4xl font-bold italic">
                                 <h4 class="">AppStore</h4>
-                                <i onclick="loadPage('/appstore.html')"
+                                <i onclick="loadPage('appstore.html')"
                                     class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
                             </div>
 
@@ -423,7 +334,7 @@
                                 roommates.</p>
                             <div class="flex items-center justify-between text-4xl font-bold italic">
                                 <h4 class="">RoommateFinder</h4>
-                                <i onclick="loadPage('/roommateFinder.html')"
+                                <i onclick="loadPage('roommateFinder.html')"
                                     class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
                             </div>
                         </div>
@@ -453,6 +364,7 @@
         </div>
     </div>
 
+    <script src="shared-nav.js"></script>
     <script src="index.js"></script>
 </body>
 

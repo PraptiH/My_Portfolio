@@ -177,14 +177,6 @@
                 border-bottom: 4px solid;
             }
         }
-
-        @media (max-width: 950px) {
-            #contact {
-                display: flex;
-                flex-direction: column;
-                gap: 15px
-            }
-        }
     </style>
 </head>
 
@@ -315,8 +307,9 @@
                                 explore, browse, and manage various applications.</p>
                             <div class="flex items-center justify-between text-4xl font-bold italic">
                                 <h4 class="">AppStore</h4>
-                                <i onclick="loadPage('appstore.html')"
-                                    class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
+                                <a href="appstore.html">
+                                    <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
+                                </a>
                             </div>
 
                         </div>
@@ -334,8 +327,9 @@
                                 roommates.</p>
                             <div class="flex items-center justify-between text-4xl font-bold italic">
                                 <h4 class="">RoommateFinder</h4>
-                                <i onclick="loadPage('roommateFinder.html')"
-                                    class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
+                                <a href="roommateFinder.html">
+                                    <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -345,27 +339,11 @@
     </div>
 
     <!-- Footer -->
-    <div id="contact"
-        class="flex items-center justify-center gap-[5rem] border-t-4 p-[4rem] mt-[5rem] bottom-0  w-full ">
-
-        <div class="flex items-center gap-[1rem]">
-            <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
-            <h4 class="font-bold text-3xl cursor-pointer">Prapti</h4>
-        </div>
-
-        <div>
-            <p class="text-2xl">© All rights reserved by Prapti</p>
-        </div>
-
-        <div class="text-5xl flex gap-[3rem]">
-            <i class="fa-brands fa-github cursor-pointer" style="color: ;"></i>
-            <i class="fa-regular fa-envelope cursor-pointer" style="color: ;"></i>
-            <i class="fa-brands fa-facebook cursor-pointer" style="color: ;"></i>
-        </div>
-    </div>
+    <div id="footer-slot"></div>
 
     <script src="shared-nav.js"></script>
     <script src="index.js"></script>
+    <script src="shared-footer.js"></script>
 </body>
 
 </html>

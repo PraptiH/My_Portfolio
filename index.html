@@ -27,17 +27,42 @@
             background-color: #fefff0;
         }
 
+         .navContent {
+            position: relative;
+            width: min(50rem, 90vw);
+        }
+
         .navBox {
             position: absolute;
-            bottom: 46px;
-            left: -50%;
-            right: -50%;
+            inset: 0;
+            transform: translateX(-3.2rem);
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: 49.5rem;
-            row-gap: 4.8rem;
-            width: min(52rem, 90%);
-            margin: auto;
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .navBox div:nth-child(1) {
+            justify-self: start;
+            align-self: start;
+            transform: translate(32px, -18px);
+        }
+
+        .navBox div:nth-child(2) {
+            justify-self: end;
+            align-self: start;
+            transform: translate(70px, -18px);
+        }
+
+        .navBox div:nth-child(3) {
+            justify-self: start;
+            align-self: end;
+            transform: translate(32px, 18px);
+        }
+
+        .navBox div:nth-child(4) {
+            justify-self: end;
+            align-self: end;
+            transform: translate(70px, 18px);
         }
 
         .navBox div {
@@ -68,8 +93,8 @@
         .runningText {
             display: flex;
             align-items: center;
-            padding-left: 8rem;
-            gap: 8rem;
+            padding-left: clamp(2rem, 4vw, 8rem);
+            gap: clamp(3rem, 5vw, 8rem);
             color: white;
             white-space: nowrap;
         }
@@ -140,25 +165,101 @@
         .projectDiv {
             border-top: 4px solid;
             border-bottom: 4px solid;
-            padding: 8%;
-            width: 42rem;
-            margin-left: -2.5rem
+            padding: clamp(3rem, 2vw, 4rem);
+            width: 100%;
+            min-width: 42rem;
+            transform: translateX(-5%)
+        }
+
+        @media (max-width: 1024px) {
+
+            #about,
+            .projectContainer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .heroTextContainer{
+                padding: 25px;
+            }
+
+            .card {
+                grid-template-columns: 1fr;
+                grid-template-rows: unset;
+            }
+
+            #card1 {
+                grid-column: 1;
+                grid-row: unset;
+                border-top: 4px solid;
+            }
+
+            #card2 {
+                grid-column: 1;
+                grid-row: unset;
+                border-top: 4px solid;
+            }
+
+            #card3 {
+                grid-column: 1;
+                grid-row: unset;
+                border-top: 4px solid;
+                border-bottom: 4px solid;
+            }
+
+            #card4 {
+                grid-column: 1;
+                grid-row: unset;
+                border: none;
+            }
+
+            #card5 {
+                grid-column: 1;
+                grid-row: unset;
+                border-top: 4px solid;
+                border-bottom: 4px solid;
+                border-left: none;
+                border-right: none;
+            }
+
+            #card6 {
+                grid-column: 1;
+                grid-row: unset;
+                border: none;
+            }
+
+            #card7 {
+                grid-column: 1;
+                grid-row: unset;
+                border-top: 4px solid;
+                border-bottom: 4px solid;
+            }
+        }
+
+        @media (max-width: 950px) {
+            #contact {
+                display: flex;
+                flex-direction: column;
+                gap: 15px
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <div id="navbar" class="border-b-4 sticky p-24 top-0 z-50 w-full">
-        <div class="navBox">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <div id="navbar" class="border-b-4 sticky pt-20 pb-5 top-0 z-50 w-full">
 
-        <div
-            class="navContent border-4 w-full max-w-[50rem] h-[5rem] mx-auto flex items-center p-[2rem] justify-between absolute bottom-15 -left-1/2 -right-1/2">
+
+        <div class="navContent border-4 h-[5rem] mx-auto flex items-center p-[2rem] justify-between bottom-10 ">
+
+            <div class="navBox">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
             <div class="py-[1.5rem] flex items-center gap-2">
                 <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
                 <h4 onclick="window.location.href='/index.html'" class="font-bold text-3xl cursor-pointer">Prapti</h4>
@@ -172,17 +273,17 @@
             </div>
         </div>
 
-        <div>
-            <img class="w-[8rem] absolute top-20 -left-12 rotate-30" src="./assets/8-pointed-star.png" alt="">
-            <img class="w-[8rem] absolute bottom-25 -right-10 rotate-30" src="./assets/8-pointed-star.png" alt="">
-        </div>
+        <!-- <div class="border-2 border-red-700">
+            <img class="w-[8rem] absolute top-20 -translate-x-10 rotate-30" src="./assets/8-pointed-star.png" alt="">
+            <img class="w-[8rem] absolute bottom-25 right-10 rotate-30" src="./assets/8-pointed-star.png" alt="">
+        </div> -->
     </div>
 
     <div id="content" class="w-full mx-auto">
         <!-- Hero -->
-        <div id="about" class="flex flex-col lg:flex-row items-center justify-center gap-20 min-h-screen w-full">
+        <div id="about" class="flex items-center justify-center gap-20 min-h-screen max-w-screen-2xl mx-auto">
 
-            <div class="w-full max-w-[50rem]">
+            <div class="heroTextContainer w-full max-w-screen-xl">
                 <img src="./assets/heroImg.svg" alt="">
                 <h2 class="font-bold text-5xl leading-relaxed">Building clean, responsive web interfaces with modern
                     technologies.</h2>
@@ -192,7 +293,7 @@
                     digital experiences.</p>
             </div>
 
-            <div class="w-full lg:w-[50rem]">
+            <div class="max-w-screen-xl">
                 <div class="w-[5rem] flex items-center -rotate-30 translate-x-8 translate-y-5">
                     <img src="./assets/smilei.png" alt="">
                     <p class="text-5xl">Prapti</p>
@@ -209,14 +310,14 @@
                 </div>
 
                 <div class="relative">
-                    <img class="absolute -right-5 -top-30 lg:right-10 rotate-180 w-[10rem]"
-                    src="./assets/star.png" alt="">
+                    <img class="absolute -right-5 -top-30 rotate-180 w-[10rem]" src="./assets/star.png"
+                        alt="">
                 </div>
             </div>
         </div>
 
         <!-- Skill -->
-        <div class="runningContainer bg-black py-[2rem] lg:my-0 my-25">
+        <div class="runningContainer bg-black py-[2rem] my-25">
             <div class="wrapperContainer">
                 <div class="runningText">
                     <p class="font-semibold text-5xl tracking-wider">HTML</p>
@@ -242,6 +343,7 @@
 
         <!--  -->
         <div class="max-w-7xl mx-auto px-6 my-[15rem]">
+
             <div class="flex items-center gap-[2rem]">
                 <h1 class="font-semibold text-6xl">What I bring to the table</h1>
                 <img class="w-[5rem] h-[5rem] object-cover" src="./assets/smile.png" alt="">
@@ -287,15 +389,16 @@
         </div>
 
         <!-- Project -->
-        <div id="project" class="max-w-7xl mx-auto px-6 my-[15rem]">
+        <div id="project" class="max-w-screen-2xl mx-auto px-6 my-[15rem]">
             <h2 class="font-bold text-7xl leading-loose">Projects</h2>
 
-            <div class="mt-10 flex flex-col lg:flex-row justify-center mx-15">
+            <div class="projectContainer mt-10 flex items-center gap-20 justify-center ">
 
-                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem]  mx-[4rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
+                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
 
                     <div class="projectDiv hover:shadow-gray-500 hover:shadow-[0_4px]">
-                        <img class="w-full max-w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/appStore.png" alt="">
+                        <img class="w-full aspect-video object-cover border-3 hover:shadow-xl"
+                            src="./assets/appStore.png" alt="">
                         <div>
                             <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals to
                                 explore, browse, and manage various applications.</p>
@@ -305,16 +408,15 @@
                                     class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
                             </div>
 
-
                         </div>
                     </div>
                 </div>
 
-                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem] mx-[4rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
+                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
 
                     <div class="projectDiv hover:shadow-gray-500 hover:shadow-[0_4px]">
-                        <img class="w-full max-w-[40rem] h-[20rem] border-3 hover:shadow-xl" src="./assets/roommatefinder.png"
-                            alt="">
+                        <img class="w-full aspect-video object-cover border-3 hover:shadow-xl"
+                            src="./assets/roommatefinder.png" alt="">
                         <div>
                             <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals find
                                 compatible
@@ -340,7 +442,9 @@
             <h4 class="font-bold text-3xl cursor-pointer">Prapti</h4>
         </div>
 
-        <p class="text-2xl">© All rights reserved by Prapti</p>
+        <div>
+            <p class="text-2xl">© All rights reserved by Prapti</p>
+        </div>
 
         <div class="text-5xl flex gap-[3rem]">
             <i class="fa-brands fa-github cursor-pointer" style="color: ;"></i>

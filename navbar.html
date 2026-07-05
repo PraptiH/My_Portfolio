@@ -71,7 +71,39 @@
 
 <body>
     <div id="navbar" class="border-b-4 fixed pt-20 pb-5 top-0 z-50 w-full">
-        <div class="navContent border-4 h-[5rem] mx-auto flex items-center p-[2rem] justify-between bottom-10 ">
+        <div class="navContent border-4 h-[5rem] mx-auto flex items-center p-[2rem] justify-between bottom-10 relative">
+
+            <div class="py-[1.5rem] flex items-center gap-2">
+                <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
+                <h4 onclick="window.location.href='index.html'" class="font-bold text-3xl cursor-pointer">Prapti</h4>
+            </div>
+
+            <!-- Mobile toggle button -->
+            <button id="nav-toggle" class="md:hidden p-2 ml-2" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3z"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop nav -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center justify-between gap-[2rem] font-medium text-2xl ">
+                    <li class="navLink py-[1.5rem] ml-[1rem] px-[1rem]"><a href="index.html#about">About</a></li>
+                    <li class="navLink py-[1.5rem] px-[1rem] border-l-3 border-r-3"><a
+                            href="index.html#project">Project</a>
+                    </li>
+                    <li class="navLink py-[1.5rem]"><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile menu (hidden by default) -->
+            <nav id="mobile-menu" class="hidden absolute left-0 top-full w-full bg-white border-t">
+                <ul class="flex flex-col p-4 gap-2 font-medium text-xl">
+                    <li class="py-2"><a href="index.html#about">About</a></li>
+                    <li class="py-2"><a href="index.html#project">Project</a></li>
+                    <li class="py-2"><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
 
             <div class="navBox">
                 <div></div>
@@ -80,20 +112,6 @@
                 <div></div>
             </div>
 
-            <div class="py-[1.5rem] flex items-center gap-2">
-                <img class="w-[4rem] cursor-pointer" src="./assets/navStar.png" alt="logo" width="26">
-                <h4 onclick="window.location.href='index.html'" class="font-bold text-3xl cursor-pointer">Prapti</h4>
-            </div>
-
-            <div class="border-l-3">
-                <ul class="flex items-center justify-between gap-[2rem] font-medium text-2xl ">
-                    <li class="navLink py-[1.5rem] ml-[1rem] px-[1rem]"><a href="index.html#about">About</a></li>
-                    <li class="navLink py-[1.5rem] px-[1rem] border-l-3 border-r-3"><a
-                            href="index.html#project">Project</a>
-                    </li>
-                    <li class="navLink py-[1.5rem]"><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 </body>

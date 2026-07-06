@@ -23,6 +23,12 @@
             overflow-x: hidden;
         }
 
+        #about,
+        #project,
+        #contact {
+            scroll-margin-top: 10rem;
+        }
+
         .runningContainer {
             overflow: hidden;
         }
@@ -164,21 +170,17 @@
 <body>
     <div id="navbar-slot"></div>
 
-    <div id="content" class=" border-red-700 border-2 mx-auto mt-50 pt-15">
+    <div id="content" class="mx-auto mt-50 pt-15">
         <!-- Hero -->
-        <div class="flex flex-wrap items-center justify-center gap-10 px-5 lg:px-0 md:px-0">
+        <div id="about" class="flex flex-wrap items-center justify-center gap-10 px-5 lg:px-0 md:px-0">
 
             <div class=" w-200">
                 <img class="w-30 lg:w-50 md:w-50" src="./assets/heroImg.svg" alt="">
                 <div>
                     <h2 class="font-bold text-3xl lg:text-5xl md:5xl leading-relaxed">Building clean, responsive web
-                        interfaces with modern
-                        technologies.</h2>
+                        interfaces with modern technologies.</h2>
                     <p class="text-xl lg:text-3xl md:text-3xl tracking-wider leading-loose">Aspiring Software Engineer
-                        focused on creating
-                        intuitive,
-                        user-friendly
-                        digital experiences.</p>
+                        focused on creating intuitive, user-friendly digital experiences.</p>
                 </div>
             </div>
 
@@ -275,7 +277,7 @@
         </div>
 
         <!-- Project -->
-        <div class="mx-auto px-6 my-30 w-11/12 lg:w-9/12 md:w-9/12">
+        <div id="project" class="mx-auto px-6 my-30 w-11/12 lg:w-9/12 md:w-9/12">
             <h2 class="font-bold text-4xl lg:text-6xl md:text-6xl leading-loose">Projects</h2>
 
             <div class="mt-10 flex flex-wrap items-stretch justify-center gap-10 w-full mx-auto">

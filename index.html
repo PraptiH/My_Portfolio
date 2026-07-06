@@ -115,11 +115,11 @@
 
         @media (max-width: 1024px) {
 
-            #about,
+            /* #about,
             .projectContainer {
                 display: flex;
                 flex-direction: column;
-            }
+            } */
 
             .heroTextContainer {
                 padding: 25px;
@@ -176,6 +176,51 @@
                 border-top: 4px solid;
                 border-bottom: 4px solid;
             }
+
+            /* Prevent horizontal overflow from wide fixed elements */
+            /* #about {
+                overflow: visible;
+            }
+
+            .hero-column {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 1rem;
+            }
+
+            .visual-frame {
+                max-width: 100% !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .visual-inner {
+                max-width: 100% !important;
+                width: 100% !important;
+                height: auto !important;
+                margin: 0 auto;
+                transform: none !important;
+            }
+
+            .visual-bulb,
+            .visual-star {
+                position: static !important;
+                transform: none !important;
+                width: 6rem !important;
+                margin: .5rem auto !important;
+            } */
+
+            /* remove large fixed min-width from projects on smaller screens */
+            /* .projectDiv {
+                min-width: unset !important;
+            } */
+
+            /* ensure images never overflow */
+            /* img {
+                max-width: 100%;
+                height: auto;
+                box-sizing: border-box;
+            } */
         }
     </style>
 </head>
@@ -183,44 +228,44 @@
 <body>
     <div id="navbar-slot"></div>
 
-    <div id="content" class="w-full mx-auto mt-50">
+    <div id="content" class=" border-red-700 border-2 mx-auto mt-50 py-15 bg-slate-300 px-5 lg:px-0 md:px-0">
         <!-- Hero -->
-        <div id="about" class="flex items-center justify-center gap-20 min-h-screen max-w-screen-2xl mx-auto">
+        <div class="flex flex-wrap items-center justify-center gap-10">
 
-            <div class="heroTextContainer w-full max-w-screen-xl">
-                <img src="./assets/heroImg.svg" alt="">
-                <h2 class="font-bold text-5xl leading-relaxed">Building clean, responsive web interfaces with modern
-                    technologies.</h2>
-                <p class="text-3xl tracking-wider leading-loose">Aspiring Software Engineer focused on creating
-                    intuitive,
-                    user-friendly
-                    digital experiences.</p>
+            <div class=" w-200">
+                <img class="w-30 lg:w-50 md:w-50" src="./assets/heroImg.svg" alt="">
+                <div>
+                    <h2 class="font-bold text-3xl lg:text-5xl md:5xl leading-relaxed">Building clean, responsive web
+                        interfaces with modern
+                        technologies.</h2>
+                    <p class="text-xl lg:text-3xl md:text-3xl tracking-wider leading-loose">Aspiring Software Engineer
+                        focused on creating
+                        intuitive,
+                        user-friendly
+                        digital experiences.</p>
+                </div>
             </div>
 
-            <div class="max-w-screen-xl">
-                <div class="w-[5rem] flex items-center -rotate-30 translate-x-8 translate-y-5">
-                    <img src="./assets/smilei.png" alt="">
-                    <p class="text-5xl">Prapti</p>
-                    <img class="translate-y-15 -rotate-15" src="./assets/arrow.png" alt="">
+            <div class=" relative">
+
+                <div class="flex items-center gap-4">
+                    <img class="-rotate-40 w-15" src="./assets/smile.png" alt="">
+                    <p class="text-3xl -rotate-45">Prapti</p>
+                    <img class="w-15 -rotate-60" src="./assets/arrow.png" alt="">
                 </div>
 
-                <div class="mx-[4rem] relative">
-                    <div class="border-t-4 border-b-4 w-[38rem] h-[40rem]">
-                        <img class="absolute -left-18 top-15 w-[15rem] -rotate-40" src="./assets/bulb.png" alt="">
-                        <div class="border-l-4 border-r-4 w-[35rem] h-[42rem] m-auto -translate-y-5">
-                            <img class="w-[30rem] border-3 m-auto translate-y-12" src="./assets/profile.png" alt="">
-                        </div>
-                    </div>
+                <img class="lg:w-25 md:w-25 w-16 absolute -left-5 top-1/2 -translate-y-1/2 -rotate-45" src="./assets/bulb.png" alt="">
+
+                <div class=" border-4 p-6 lg:p-8">
+                    <img class="border-3 w-110" src="./assets/profile.png" alt="">
                 </div>
 
-                <div class="relative">
-                    <img class="absolute -right-5 -top-30 rotate-180 w-[10rem]" src="./assets/star.png" alt="">
-                </div>
+                <img class="lg:w-18 md:w-18 w-16 absolute -right-1 lg:-right-8 md:-right-8 -translate-y-6 rotate-30" src="./assets/star.png" alt="">
             </div>
         </div>
 
         <!-- Skill -->
-        <div class="runningContainer bg-black py-[2rem] my-25">
+        <!-- <div class="runningContainer bg-black py-[2rem] my-25">
             <div class="wrapperContainer">
                 <div class="runningText">
                     <p class="font-semibold text-5xl tracking-wider">HTML</p>
@@ -242,10 +287,10 @@
                     <p class="font-semibold text-5xl tracking-wider">Firebase</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--  -->
-        <div class="max-w-7xl mx-auto px-6 my-[15rem]">
+        <!-- <div class=" mx-auto px-6 my-[15rem]">
 
             <div class="flex items-center gap-[2rem]">
                 <h1 class="font-semibold text-6xl">What I bring to the table</h1>
@@ -289,10 +334,10 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
         <!-- Project -->
-        <div id="project" class="max-w-screen-2xl mx-auto px-6 my-[15rem]">
+        <!-- <div id="project" class="w-full mx-auto px-6 my-[15rem]">
             <h2 class="font-bold text-7xl leading-loose">Projects</h2>
 
             <div class="projectContainer mt-10 flex items-center gap-20 justify-center ">
@@ -335,7 +380,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Footer -->

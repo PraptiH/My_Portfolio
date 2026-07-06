@@ -104,26 +104,7 @@
             grid-row: 3;
         }
 
-        .projectDiv {
-            border-top: 4px solid;
-            border-bottom: 4px solid;
-            padding: clamp(3rem, 2vw, 4rem);
-            width: 100%;
-            min-width: 42rem;
-            transform: translateX(-5%)
-        }
-
         @media (max-width: 1024px) {
-
-            /* #about,
-            .projectContainer {
-                display: flex;
-                flex-direction: column;
-            } */
-
-            .heroTextContainer {
-                padding: 25px;
-            }
 
             .card {
                 grid-template-columns: 1fr;
@@ -176,51 +157,6 @@
                 border-top: 4px solid;
                 border-bottom: 4px solid;
             }
-
-            /* Prevent horizontal overflow from wide fixed elements */
-            /* #about {
-                overflow: visible;
-            }
-
-            .hero-column {
-                width: 100%;
-                box-sizing: border-box;
-                padding: 0 1rem;
-            }
-
-            .visual-frame {
-                max-width: 100% !important;
-                width: 100% !important;
-                height: auto !important;
-            }
-
-            .visual-inner {
-                max-width: 100% !important;
-                width: 100% !important;
-                height: auto !important;
-                margin: 0 auto;
-                transform: none !important;
-            }
-
-            .visual-bulb,
-            .visual-star {
-                position: static !important;
-                transform: none !important;
-                width: 6rem !important;
-                margin: .5rem auto !important;
-            } */
-
-            /* remove large fixed min-width from projects on smaller screens */
-            /* .projectDiv {
-                min-width: unset !important;
-            } */
-
-            /* ensure images never overflow */
-            /* img {
-                max-width: 100%;
-                height: auto;
-                box-sizing: border-box;
-            } */
         }
     </style>
 </head>
@@ -228,7 +164,7 @@
 <body>
     <div id="navbar-slot"></div>
 
-    <div id="content" class=" border-red-700 border-2 mx-auto mt-50 py-15 bg-slate-300 ">
+    <div id="content" class=" border-red-700 border-2 mx-auto mt-50 pt-15">
         <!-- Hero -->
         <div class="flex flex-wrap items-center justify-center gap-10 px-5 lg:px-0 md:px-0">
 
@@ -246,7 +182,7 @@
                 </div>
             </div>
 
-            <div class=" relative">
+            <div class="relative">
 
                 <div class="flex items-center gap-4">
                     <img class="-rotate-40 w-15" src="./assets/smile.png" alt="">
@@ -254,13 +190,15 @@
                     <img class="w-15 -rotate-60" src="./assets/arrow.png" alt="">
                 </div>
 
-                <img class="lg:w-25 md:w-25 w-16 absolute -left-5 top-1/2 -translate-y-1/2 -rotate-45" src="./assets/bulb.png" alt="">
+                <img class="lg:w-25 md:w-25 w-16 absolute -left-5 top-1/2 -translate-y-1/2 -rotate-45"
+                    src="./assets/bulb.png" alt="">
 
                 <div class=" border-4 p-6 lg:p-8">
                     <img class="border-3 w-110" src="./assets/profile.png" alt="">
                 </div>
 
-                <img class="lg:w-18 md:w-18 w-16 absolute -right-1 lg:-right-8 md:-right-8 -translate-y-6 rotate-30" src="./assets/star.png" alt="">
+                <img class="lg:w-18 md:w-18 w-16 absolute -right-1 lg:-right-8 md:-right-8 -translate-y-6 rotate-30"
+                    src="./assets/star.png" alt="">
             </div>
         </div>
 
@@ -268,23 +206,23 @@
         <div class="runningContainer bg-black py-[2rem] my-30 ">
             <div class="wrapperContainer">
                 <div class="runningText">
-                    <p class="font-semibold text-5xl tracking-wider">HTML</p>
-                    <p class="font-semibold text-5xl tracking-wider">CSS</p>
-                    <p class="font-semibold text-5xl tracking-wider">Tailwind CSS</p>
-                    <p class="font-semibold text-5xl tracking-wider">JavaScript</p>
-                    <p class="font-semibold text-5xl tracking-wider">React</p>
-                    <p class="font-semibold text-5xl tracking-wider">MongoDB</p>
-                    <p class="font-semibold text-5xl tracking-wider">Firebase</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">HTML</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">CSS</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">Tailwind CSS</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">JavaScript</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">React</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">MongoDB</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">Firebase</p>
                 </div>
 
                 <div class="runningText">
-                    <p class="font-semibold text-5xl tracking-wider">HTML</p>
-                    <p class="font-semibold text-5xl tracking-wider">CSS</p>
-                    <p class="font-semibold text-5xl tracking-wider">Tailwind CSS</p>
-                    <p class="font-semibold text-5xl tracking-wider">JavaScript</p>
-                    <p class="font-semibold text-5xl tracking-wider">React</p>
-                    <p class="font-semibold text-5xl tracking-wider">MongoDB</p>
-                    <p class="font-semibold text-5xl tracking-wider">Firebase</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">HTML</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">CSS</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">Tailwind CSS</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">JavaScript</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">React</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">MongoDB</p>
+                    <p class="font-semibold text-3xl lg:text-5xl md:text-5xl tracking-wider">Firebase</p>
                 </div>
             </div>
         </div>
@@ -298,35 +236,35 @@
             </div>
 
             <div class="card font-extralight text-3xl mt-[2rem]">
-                <div id="card1" class="p-[2rem]">
-                    <p>5+</p>
+                <div id="card1" class="p-[2rem] text-2xl lg:text-3xl md:text-3xl">
+                    <p class="font-bold text-3xl">5+</p>
                     <p>Project Built</p>
                 </div>
-                <div id="card2" class="p-[2rem]">
-                    <p>3+</p>
+                <div id="card2" class="p-[2rem] text-2xl lg:text-3xl md:text-3xl">
+                    <p class="font-bold text-3xl">3+</p>
                     <p>Live Projects Deployed</p>
                 </div>
-                <div id="card3" class="p-[2rem]">
+                <div id="card3" class="p-[2rem] text-2xl lg:text-3xl md:text-3xl">
                     <p>Fully Responsive Designs
                         Works across mobile, tablet, and desktop</p>
                 </div>
-                <div id="card4" class=" p-[2rem]">
+                <div id="card4" class=" p-[2rem] text-2xl lg:text-3xl md:text-3xl">
                     <img class="w-[4rem] bg-[#2d6a4f] border rounded-full p-2" src="./assets/growth.png" alt="">
                     <p>Continuous Learning
                         Improving skills through hands-on practice.</p>
                 </div>
-                <div id="card5" class="p-[2rem]">
+                <div id="card5" class="p-[2rem] text-2xl lg:text-3xl md:text-3xl">
                     <img class="w-[4rem] bg-[#52796f] border rounded-full p-2" src="./assets/idea.png" alt="">
                     <p>Modern Frontend Development
                         Building apps using React, Tailwind, and JavaScript.</p>
                 </div>
-                <div id="card6" class="p-[2rem]">
+                <div id="card6" class="p-[2rem] text-2xl lg:text-3xl md:text-3xl">
                     <img class="w-[4rem] h-[4rem] bg-[#006466] border rounded-full p-2  object-cover"
                         src="./assets/uiux.png" alt="">
                     <p>Clean UI & UX
                         Focused on intuitive and user-friendly design.</p>
                 </div>
-                <div id="card7" class="p-[2rem]">
+                <div id="card7" class="p-[2rem] text-2xl lg:text-3xl md:text-3xl">
                     <img class="w-[4rem] h-[4rem] bg-[#8d9aa7] border rounded-full p-2  object-cover"
                         src="./assets/error.png" alt="">
                     <p>Firebase Integration
@@ -337,53 +275,42 @@
         </div>
 
         <!-- Project -->
-        <!-- <div id="project" class="w-full mx-auto px-6 my-[15rem]">
-            <h2 class="font-bold text-7xl leading-loose">Projects</h2>
+        <div class="mx-auto px-6 my-30 w-11/12 lg:w-9/12 md:w-9/12">
+            <h2 class="font-bold text-4xl lg:text-6xl md:text-6xl leading-loose">Projects</h2>
 
-            <div class="projectContainer mt-10 flex items-center gap-20 justify-center ">
+            <div class="mt-10 flex flex-wrap items-stretch justify-center gap-10 w-full mx-auto">
 
-                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
-
-                    <div class="projectDiv hover:shadow-gray-500 hover:shadow-[0_4px]">
-                        <img class="w-full aspect-video object-cover border-3 hover:shadow-xl"
-                            src="./assets/appStore.png" alt="">
-                        <div>
-                            <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals to
-                                explore, browse, and manage various applications.</p>
-                            <div class="flex items-center justify-between text-4xl font-bold italic">
-                                <h4 class="">AppStore</h4>
-                                <a href="appstore.html">
-                                    <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
-                                </a>
-                            </div>
-
+                <div class="border-3 p-8 w-full min-w-0 lg:flex-1 lg:basis-[32rem] lg:max-w-[40rem]">
+                    <img class="border-2 w-full" src="./assets/appStore.png" alt="">
+                    <div>
+                        <p class="text-xl lg:text-2xl leading-loose tracking-wider break-words"> A platform that helps
+                            individuals to explore, browse, and manage various applications.</p>
+                        <div class="flex items-center justify-between gap-4 text-2xl lg:text-4xl font-bold italic">
+                            <h4>AppStore</h4>
+                            <a href="appstore.html">
+                                <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="border-l-4 border-r-4 p-4 w-full max-w-[40rem] hover:shadow-gray-500 hover:shadow-[4px_0]">
-
-                    <div class="projectDiv hover:shadow-gray-500 hover:shadow-[0_4px]">
-                        <img class="w-full aspect-video object-cover border-3 hover:shadow-xl"
-                            src="./assets/roommatefinder.png" alt="">
-                        <div>
-                            <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals find
-                                compatible
-                                roommates.</p>
-                            <div class="flex items-center justify-between text-4xl font-bold italic">
-                                <h4 class="">RoommateFinder</h4>
-                                <a href="roommateFinder.html">
-                                    <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
-                                </a>
-                            </div>
+                <div class="border-3 p-8 w-full min-w-0 lg:flex-1 lg:basis-[32rem] lg:max-w-[40rem]">
+                    <img class="border-2 w-full" src="./assets/roommatefinder.png" alt="">
+                    <div>
+                        <p class="text-xl lg:text-2xl leading-loose tracking-wider break-words"> A platform that helps
+                            individuals find compatible roommates.</p>
+                        <div class="flex items-center justify-between gap-4 text-2xl lg:text-4xl font-bold italic">
+                            <h4>RoommateFinder</h4>
+                            <a href="roommateFinder.html">
+                                <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
-    <!-- Footer -->
     <div id="footer-slot"></div>
 
     <script src="shared-nav.js"></script>

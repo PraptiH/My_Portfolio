@@ -21,3 +21,5 @@ document.addEventListener('navbar-slot:loaded', setupNavbarToggle)
 
 // Also attempt initialization on DOMContentLoaded in case the navbar is already present.
 document.addEventListener('DOMContentLoaded', setupNavbarToggle)
+
+

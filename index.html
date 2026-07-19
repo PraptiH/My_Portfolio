@@ -93,13 +93,12 @@
 
         #card5 {
             border-top: 4px solid;
-            /* border-bottom: 4px solid; */
             grid-column: 3;
             grid-row: 1/3;
         }
 
         #card6 {
-            border:4px solid ;
+            border: 4px solid;
             grid-column: 2;
             grid-row: 3;
         }
@@ -171,38 +170,45 @@
 <body>
     <div id="navbar-slot"></div>
 
-    <div id="content" class="mx-auto mt-45">
+    <div id="content" class="mt-32">
         <!-- Hero -->
-        <div id="about" class="flex flex-wrap items-center justify-center gap-10 px-5 lg:px-0 md:px-0">
+        <div id="about" class="flex flex-wrap items-center justify-center gap-10 px-5">
 
-            <div class=" w-200">
-                <img class="w-30 lg:w-50 md:w-50" src="./assets/heroImg.svg" alt="">
-                <div>
-                    <h2 class="font-bold text-3xl lg:text-5xl md:5xl leading-relaxed">Building clean, responsive web
-                        interfaces with modern technologies.</h2>
-                    <p class="text-xl lg:text-3xl md:text-3xl tracking-wider leading-loose">Aspiring Software Engineer
-                        focused on creating intuitive, user-friendly digital experiences.</p>
+            <!-- Left Side -->
+            <div class="w-full lg:w-2/5 space-y-6 mt-10">
+                <img class="w-28" src="./assets/heroImg.svg" alt="">
+
+                <div class="space-y-4">
+                    <h2 class="font-bold text-3xl md:text-4xl leading-relaxed">
+                        Building clean, responsive web interfaces with modern technologies.
+                    </h2>
+
+                    <p class="text-lg md:text-xl tracking-wide leading-loose">
+                        Aspiring Software Engineer focused on creating intuitive,
+                        user-friendly digital experiences.
+                    </p>
                 </div>
             </div>
 
-            <div class="relative">
+            <!-- Right Side -->
+            <div class="relative w-full lg:w-2/5 max-w-md">
 
                 <div class="flex items-center gap-4">
-                    <img class="-rotate-40 w-15" src="./assets/smile.png" alt="">
-                    <p class="text-3xl -rotate-45">Prapti</p>
-                    <img class="w-15 -rotate-60" src="./assets/arrow.png" alt="">
+                    <img class="w-10 -rotate-40" src="./assets/smile.png" alt="">
+                    <p class="text-3xl -rotate-35">Prapti</p>
+                    <img class="w-14 -rotate-60" src="./assets/arrow.png" alt="">
                 </div>
 
-                <img class="lg:w-25 md:w-25 w-16 absolute -left-5 top-1/2 -translate-y-1/2 -rotate-45"
-                    src="./assets/bulb.png" alt="">
+                <img class="absolute w-16 -left-6 top-1/2 -translate-y-1/2 -rotate-45" src="./assets/bulb.png" alt="">
 
-                <div class=" border-4 p-6 lg:p-8">
-                    <img class="border-3 w-110" src="./assets/profile.png" alt="">
+                <div class="border-3 p-6 ">
+                    <img class="w-full h-100 object-cover border-2" src="./assets/profile.png" alt="">
                 </div>
 
-                <img class="lg:w-18 md:w-18 w-16 absolute -right-1 lg:-right-8 md:-right-8 -translate-y-6 rotate-30"
+                <img class="w-16 absolute -right-6 lg:-right-8 md:-right-8 -translate-y-6 rotate-30"
                     src="./assets/star.png" alt="">
             </div>
+
         </div>
 
         <!-- Skill -->
@@ -234,8 +240,8 @@
         <div class="mx-auto px-6 my-30 w-11/12 lg:w-9/12 md:w-9/12">
 
             <div class="flex items-center gap-20">
-                <h1 class="font-semibold text-4xl lg:text-6xl md:text-6xl">What I bring to the table</h1>
-                <img class="w-15 h-15 lg:w-20 lg:h-20 md:w-20 md:h-20 object-cover" src="./assets/smile.png" alt="">
+                <h1 class="font-semibold text-3xl lg:text-5xl md:text-5xl">What I bring to the table</h1>
+                <img class="w-12 h-12 lg:w-15 md:h-15 md:w-15 md:h-15 object-cover" src="./assets/smile.png" alt="">
             </div>
 
             <div class="card font-extralight text-3xl mt-[2rem]">
@@ -279,16 +285,16 @@
 
         <!-- Project -->
         <div id="project" class="mx-auto px-6 my-30 w-11/12 lg:w-9/12 md:w-9/12">
-            <h2 class="font-bold text-4xl lg:text-6xl md:text-6xl leading-loose">Projects</h2>
+            <h2 class="font-bold text-3xl lg:text-5xl md:text-5xl leading-loose">Projects</h2>
 
             <div class="mt-10 flex flex-wrap items-stretch justify-center gap-10 w-full mx-auto">
 
                 <div class="border-3 p-8 w-full min-w-0 lg:flex-1 lg:basis-[32rem] lg:max-w-[40rem]">
                     <img class="border-2 w-full" src="./assets/appStore.png" alt="">
-                    <div>
-                        <p class="text-xl lg:text-2xl leading-loose tracking-wider break-words"> A platform that helps
+                    <div class="mt-5">
+                        <p class="text-xl lg:text-2xl leading-relaxed tracking-wide break-words"> A platform that helps
                             individuals to explore, browse, and manage various applications.</p>
-                        <div class="flex items-center justify-between gap-4 text-2xl lg:text-4xl font-bold italic">
+                        <div class="flex items-center justify-between gap-4 text-2xl lg:text-3xl my-5 font-bold italic">
                             <h4>AppStore</h4>
                             <a href="appstore.html">
                                 <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
@@ -299,10 +305,10 @@
 
                 <div class="border-3 p-8 w-full min-w-0 lg:flex-1 lg:basis-[32rem] lg:max-w-[40rem]">
                     <img class="border-2 w-full" src="./assets/roommatefinder.png" alt="">
-                    <div>
-                        <p class="text-xl lg:text-2xl leading-loose tracking-wider break-words"> A platform that helps
+                    <div class="mt-5">
+                        <p class="text-xl lg:text-2xl leading-relaxed tracking-wide break-words"> A platform that helps
                             individuals find compatible roommates.</p>
-                        <div class="flex items-center justify-between gap-4 text-2xl lg:text-4xl font-bold italic">
+                        <div class="flex items-center justify-between gap-4 text-2xl lg:text-3xl my-5 font-bold italic">
                             <h4>RoommateFinder</h4>
                             <a href="roommateFinder.html">
                                 <i class="btn fa-solid fa-arrow-trend-up cursor-pointer"></i>
